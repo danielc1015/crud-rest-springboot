@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Categoria implements Crud{
     private int id;
     private String nombre;
-    private ArrayList<Categoria> listaCategorias = new ArrayList();
+    private static ArrayList<Categoria> listaCategorias = new ArrayList();
 
     private Categoria(int id, String nombre) {
         this.id = id;
