@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Ciudad implements Crud {
     private int id;
     private String nombre;
-    private static ArrayList<Ciudad> listaCiudades;
+    private static ArrayList<Ciudad> listaCiudades = new ArrayList();
 
     private Ciudad(int id, String nombre) {
         this.id = id;

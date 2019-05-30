@@ -135,10 +135,10 @@ public class Usuario implements Crud {
      * @return
      */
     @Override
-    public Object buscar(int id) {
+    public Object buscar(int idB) {
         Usuario encontrado = new Usuario();
         for (Usuario usuario : listaUsuarios) {
-            if (usuario.id == id) {
+            if (usuario.id == idB) {
                 encontrado = usuario;
                 break;
             }
