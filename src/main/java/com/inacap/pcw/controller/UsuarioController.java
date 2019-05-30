@@ -5,6 +5,7 @@
  */
 package com.inacap.pcw.controller;
 
+import com.inacap.pcw.model.Ciudad;
 import com.inacap.pcw.model.Usuario;
 import java.util.ArrayList;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ import org.springframework.web.bind.annotation.PutMapping;
  * @author danielcandiapereira
  */
 @RestController
-@RequestMapping("/url")
+@RequestMapping("/usuario")
 public class UsuarioController {
     
     @GetMapping()

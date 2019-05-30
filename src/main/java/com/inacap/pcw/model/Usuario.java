@@ -17,12 +17,18 @@ public class Usuario implements Crud {
     private String nombre;
     private String apellido;
     private Ciudad ciudad;
-    private static ArrayList<Usuario> listaUsuarios;
+    private static ArrayList<Usuario> listaUsuarios = new ArrayList();
     
     public Usuario() {}
 
     private Usuario(int id, String nombre, String apellido, Ciudad ciudad) {
         this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ciudad = ciudad;
+    }
+    
+    public Usuario(String nombre, String apellido, Ciudad ciudad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.ciudad = ciudad;
@@ -67,18 +73,19 @@ public class Usuario implements Crud {
     @Override
     public void agregar(Object usuario) {
         // Obtener el ultimo id
-        int id;
+        int idGenerado;
         if(listaUsuarios.isEmpty()) {
-            id = 1;
+            idGenerado = 1;
         } else {
-            id = listaUsuarios.get(listaUsuarios.size() - 1).id + 1;
+            idGenerado = listaUsuarios.get(listaUsuarios.size() - 1).id + 1;
         }
         
         // Crear y guardar el objeto
         Usuario user = (Usuario) usuario;
-        user.id = id;
+        user.id = idGenerado;
         listaUsuarios.add(user);
     }
+
     
     /**
      *
@@ -86,7 +93,7 @@ public class Usuario implements Crud {
      */
     @Override
     public ArrayList<Object> listar() {
-        return (ArrayList) this.listaUsuarios;
+        return (ArrayList) listaUsuarios;
     }
     
     /**

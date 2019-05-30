@@ -21,6 +21,10 @@ public class Ciudad implements Crud {
         this.nombre = nombre;
     }
     
+    public Ciudad(String nombre) {
+        this.nombre = nombre;
+    }
+    
     public Ciudad() {}
 
     public int getId() {
